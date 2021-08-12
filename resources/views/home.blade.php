@@ -14,19 +14,15 @@
                         </div>
                     @endif
 
-                    @can('isAdmin')
-                        <div class="btn btn-success btn-lg">
-                            You have Admin Access
-                        </div>
-                    @elsecan('isManager')
-                        <div class="btn btn-primary btn-lg">
-                            You have Manager Access
-                        </div>
-                    @else
-                        <div class="btn btn-info btn-lg">
-                            You have User Access
-                        </div>
-                    @endcan
+                        @can('is_admin')
+                            <div class="btn btn-success btn-lg">
+                                Hello, Admin
+                            </div>
+                        @else
+                            <div class="btn btn-info btn-lg">
+                                Hello, User
+                            </div>
+                        @endcan
 
                 </div>
             </div>
