@@ -23,9 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/user/delete', 'App\Http\Controllers\UsersController@delete')->middleware('can:is_admin');
-Route::get('/user/show', 'App\Http\Controllers\UsersController@show')->middleware('can:is_user');
+//Route::get('/user/delete', 'App\Http\Controllers\UsersController@delete')->middleware('can:is_admin');
+//Route::get('/user/show', 'App\Http\Controllers\UsersController@show')->middleware('can:is_user');

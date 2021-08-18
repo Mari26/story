@@ -19,6 +19,7 @@ class RoleSeeder extends Seeder
             'name' => 'mari',
             'email' => 'mari@gmail.com',
             'password' => '12345678',
+            'role'=>'admin',
     ]);
     }
 }
