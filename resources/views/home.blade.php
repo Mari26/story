@@ -23,7 +23,16 @@
                                 Hello, User
                             </div>
                         @endcan
-
+                    <div class="row">
+                        <div class="col-lg-12 margin-tb">
+                            <div class="pull-left">
+                                <h2>Laravel 8 CRUD Example from scratch </h2>
+                            </div>
+                            <div class="pull-right">
+                                <a class="btn btn-success" href=""> Create New Product</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

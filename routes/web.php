@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
+Route::get('/Products/1', [HomeController::class, 'getProducts']);
+Route::get('/Provider/1', [HomeController::class, 'getProviders']);
 
 //Route::get('/user/delete', 'App\Http\Controllers\UsersController@delete')->middleware('can:is_admin');
 //Route::get('/user/show', 'App\Http\Controllers\UsersController@show')->middleware('can:is_user');
