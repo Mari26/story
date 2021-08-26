@@ -22,10 +22,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/Products/1', [HomeController::class, 'getProducts']);
-Route::get('/Provider/1', [HomeController::class, 'getProviders']);
+Route::get('/Provider', [HomeController::class, 'getProducts'])->name('Provider');
+
 
 //Route::get('/user/delete', 'App\Http\Controllers\UsersController@delete')->middleware('can:is_admin');
 //Route::get('/user/show', 'App\Http\Controllers\UsersController@show')->middleware('can:is_user');

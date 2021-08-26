@@ -11,14 +11,14 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
-    protected $fillable = ['provider_id','type_id','name'];
+    protected $fillable = ['provider_id','type_id','name','code','price','productiontime','productionperiod'];
 
     public function providers()
     {
         return $this->belongsTo(Provider::class);
     }
-    public function types()
-    {
-        return $this->belongsTo(Types::class);
-    }
+//    public function types()
+//    {
+//        return $this->belongsTo(Types::class);
+//    }
 }

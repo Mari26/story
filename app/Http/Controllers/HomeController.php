@@ -25,16 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+       $products = Product::all();
+        return view('home',compact('products'));
     }
 
-    public function getProducts($provider_id)
-    {
-        dd($provider_id);
-//        return Product::find($provider_id)->products;
+        public function getProducts()
+       {
+           $product = Product::find(1);
+           return $product->provider->name;
+
     }
-//    public function getProviders($product_id)
-//    {
-//        return Provider::find($product_id)->providers;
-//    }
+
 }
