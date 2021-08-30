@@ -11,8 +11,8 @@ class Types extends Model
     use HasFactory;
     protected $fillable = ['name'];
 
-    public function products()
+    public function Types()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Consultant::class,Consultanttype::class);
     }
 }

@@ -8,11 +8,11 @@
                 <div class="card-header">deshboard</div>
 
                 <div class="card-body">
-{{--                    @if (session('status'))--}}
-{{--                        <div class="alert alert-success" role="alert">--}}
-{{--                            {{ session('status') }}--}}
-{{--                        </div>--}}
-{{--                    @endif--}}
+                   @if (session('status'))
+                       <div class="alert alert-success" role="alert">
+                           {{ session('status') }}
+                        </div>
+                   @endif
 
                         @can('is_admin')
                             <div class="btn btn-success btn-lg">
@@ -28,10 +28,7 @@
                             <div class="pull-left">
                                 <h2>CANDY STORE</h2>
                             </div>
-{{--                            <div class="pull-right">--}}
-{{--                                <a class="btn btn-success" href=""> Create New Product</a>--}}
-{{--                            </div>--}}
-                        </div>
+
                     </div>
                     <table class="table table-bordered">
                         <tr>
@@ -53,11 +50,10 @@
                                 <td>{{ $product->price}}</td>
                                 <td>{{ $product->productiontime}}</td>
                                 <td>{{ $product->productionperiod}}</td>
-                            </tr>
 
+                            </tr>
                         @endforeach
                     </table>
-
 
                 </div>
             </div>

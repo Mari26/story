@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Provider;
 use App\Models\Types;
+use App\Models\Consultant;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -29,11 +30,8 @@ class HomeController extends Controller
         return view('home',compact('products'));
     }
 
-        public function getProducts()
-       {
-           $product = Product::find(1);
-           return $product->provider->name;
-
+    public function getonsultants($type_id)
+    {
+        return Types::find($type_id)->consultants;
     }
-
 }

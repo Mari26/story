@@ -24,8 +24,8 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/Provider', [HomeController::class, 'getProducts'])->name('Provider');
+Route::get('/consultant', [HomeController::class, 'getonsultants'])->name('getonsultants');
 
 
-//Route::get('/user/delete', 'App\Http\Controllers\UsersController@delete')->middleware('can:is_admin');
-//Route::get('/user/show', 'App\Http\Controllers\UsersController@show')->middleware('can:is_user');
+Route::get('/user/delete', 'App\Http\Controllers\UsersController@delete')->middleware('can:is_admin');
+Route::get('/user/show', 'App\Http\Controllers\UsersController@show')->middleware('can:is_user');
