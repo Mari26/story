@@ -15,21 +15,28 @@
                    @endif
 
                         @can('is_admin')
-                            <div class="btn btn-success btn-lg">
-                                Hello, Admin
-                            </div>
+
+                               <p>Hello, Admin</p>
+
                         @else
-                            <div class="btn btn-info btn-lg">
-                                Hello, User
-                            </div>
+                               <p>Hello, User</p>
+
                         @endcan
-                    <div class="row">
-                        <div class="col-lg-12 margin-tb">
-                            <div class="pull-left">
-                                <h2>CANDY STORE</h2>
-                            </div>
 
                     </div>
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <div class="container-fluid">
+                                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                    <div class="navbar-nav">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        <a class="nav-link" href="#">Consultants</a>
+                                        <a class="nav-link" href="#">Products</a>
+                                        <a class="nav-link" href="#">Providers</a>
+                                        <a class="nav-link" href="#">Types</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
 {{--                    <table class="table table-bordered">--}}
 {{--                        <tr>--}}
 {{--                            <th>provider_id</th>--}}
