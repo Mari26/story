@@ -29,39 +29,14 @@
                                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                     <div class="navbar-nav">
                                         <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                        <a class="nav-link" href="#">Consultants</a>
-                                        <a class="nav-link" href="#">Products</a>
+                                        <a class="nav-link" href="">Consultants</a>
+                                        <a class="nav-link" href="{{ route('products.index') }}">Products</a>
                                         <a class="nav-link" href="#">Providers</a>
                                         <a class="nav-link" href="#">Types</a>
                                     </div>
                                 </div>
                             </div>
                         </nav>
-{{--                    <table class="table table-bordered">--}}
-{{--                        <tr>--}}
-{{--                            <th>provider_id</th>--}}
-{{--                            <th>type_id</th>--}}
-{{--                            <th>name</th>--}}
-{{--                            <th>code</th>--}}
-{{--                            <th>price</th>--}}
-{{--                            <th>productiontime</th>--}}
-{{--                            <th>productionperiod</th>--}}
-
-{{--                        </tr>--}}
-{{--                        @foreach ($products as $product)--}}
-{{--                            <tr>--}}
-{{--                                <td>{{ $product->provider_id}}</td>--}}
-{{--                                <td>{{ $product->type_id}}</td>--}}
-{{--                                <td>{{ $product->name}}</td>--}}
-{{--                                <td>{{ $product->code}}</td>--}}
-{{--                                <td>{{ $product->price}}</td>--}}
-{{--                                <td>{{ $product->productiontime}}</td>--}}
-{{--                                <td>{{ $product->productionperiod}}</td>--}}
-
-{{--                            </tr>--}}
-{{--                        @endforeach--}}
-{{--                    </table>--}}
-
                 </div>
             </div>
         </div>
