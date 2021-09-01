@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Types;
 use Illuminate\Http\Request;
 
 class TypesController extends Controller
@@ -13,7 +13,8 @@ class TypesController extends Controller
      */
     public function index()
     {
-        //
+        $typess=Types::all();
+        return view('pages.types.index',compact('typess'));
     }
 
     /**
@@ -23,7 +24,7 @@ class TypesController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.types.index');
     }
 
     /**
@@ -34,7 +35,13 @@ class TypesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+        ]);
+
+        Types::create($request->all());
+        return redirect('types.index')->with('success','types created successfully.');
+
     }
 
     /**
@@ -43,9 +50,9 @@ class TypesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Types $types)
     {
-        //
+        return view('pages.types.show',compact('types'));
     }
 
     /**
@@ -54,9 +61,9 @@ class TypesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Types $types)
     {
-        //
+        return view('pages.types.edit',compact('types'));
     }
 
     /**
@@ -66,9 +73,14 @@ class TypesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Types $types)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+        ]);
+        $types->update($request->all());
+
+        return redirect()->route('types.index')->with('success','types updated successfully');
     }
 
     /**
@@ -77,8 +89,9 @@ class TypesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Types $types)
     {
-        //
+        $types->delete();
+        return redirect()->route('types.index')->with('success','types deleted successfully');
     }
 }

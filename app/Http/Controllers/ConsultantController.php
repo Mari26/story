@@ -39,7 +39,7 @@ class ConsultantController extends Controller
             'name'=>'required',
         ]);
         Consultant::create($request->all());
-        return redirect()->route(consultants.index)->with('success','Provider created successfully.');
+        return redirect()->route('consultants.index')->with('success','consultant created successfully.');
     }
 
     /**
@@ -89,7 +89,7 @@ class ConsultantController extends Controller
     public function destroy(Consultant $consultant)
     {
         $consultant->delete();
-        return return redirect()->route('consultans.index')
+        return redirect()->route('consultants.index')
         ->with('success','consultant deleted successfully');
     }
 }

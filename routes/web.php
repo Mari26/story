@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProviderController;
+use App\Http\Controllers\ConsultantController;
+use App\Http\Controllers\TypesController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -27,6 +29,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::resource('products', ProductController::class);
 Route::resource('providers', ProviderController::class);
-
+Route::resource('consultants', ConsultantController::class);
+Route::resource('types', TypesController::class);
 Route::get('/user/delete', 'App\Http\Controllers\UsersController@delete')->middleware('can:is_admin');
 Route::get('/user/show', 'App\Http\Controllers\UsersController@show')->middleware('can:is_user');

@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 ">
             <div class="pull-left">
-                <h2>products</h2>
+                <h2>providers</h2>
             </div>
             <div class="d-flex justify-content-end mb-3 mr-3">
-                <a class="btn btn-success" href="{{ route('providers.create') }}"> Create New Product</a>
+                <a class="btn btn-success" href="{{ route('providers.create') }}"> Create New Provider</a>
             </div>
         </div>
     </div>
@@ -20,14 +20,14 @@
 
     <table class="table table-bordered">
         <tr>
-            <th>provider_id</th>
+            <th>id</th>
 
             <th>name</th>
 
         </tr>
         @foreach ($providers as $provider)
             <tr>
-                <td>{{ $provider->provider_id}}</td>
+                <td>{{ $provider->id}}</td>
                 <td>{{ $provider->name}}</td>
 
                 <td>

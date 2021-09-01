@@ -27,10 +27,10 @@
                         <nav class="nav nav-pills nav-fill">
 
                                         <a class="nav-link " aria-current="page" href="#">Home</a>
-                                        <a class="nav-link " href="">Consultants</a>
+                                        <a class="nav-link " href="{{ route('consultants.index') }}">Consultants</a>
                                         <a class="nav-link" href="{{ route('products.index') }}">Products</a>
                                         <a class="nav-link" href="{{ route('providers.index') }}">Providers</a>
-                                        <a class="nav-link" href="#">Types</a>
+                                        <a class="nav-link" href="{{ route('types.index') }}">Types</a>
 
                         </nav>
                 <div class="container bg-success mt-4">
