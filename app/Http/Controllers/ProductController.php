@@ -37,18 +37,18 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-//            'provider_id' => 'required',
-//            'type_id' => 'required',
+            'provider_id' => 'required',
+            'type_id' => 'required',
             'name' => 'required',
             'code' => 'required',
             'price' => 'required',
-//            'productiontime' => 'required',
-//            'productionperiod' => 'required',
+            'productiontime' => 'required',
+            'productionperiod' => 'required',
         ]);
 
         Product::create($request->all());
 
-        return redirect()->route('pages.product.index')->with('success','Product created successfully.');
+        return redirect()->route('products.index')->with('success','Product created successfully.');
     }
 
     /**
@@ -93,7 +93,7 @@ class ProductController extends Controller
         ]);
         $product->update($request->all());
 
-        return redirect()->route('pages.products.index')->with('success','Product updated successfully');
+        return redirect()->route('products.index')->with('success','Product updated successfully');
     }
 
     /**
@@ -106,7 +106,7 @@ class ProductController extends Controller
     {
         $product->delete();
 
-        return redirect()->route('pages.products.index')
+        return redirect()->route('products.index')
             ->with('success','product deleted successfully');
     }
 }

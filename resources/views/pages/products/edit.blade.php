@@ -30,43 +30,43 @@
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>provider_id:</strong>
-                    <input type="text" name="title" value="{{ $product->provider_id }}" class="form-control" >
+                    <input type="text" name="provider_id" value="{{ $product->provider_id }}" class="form-control"  >
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>type_id:</strong>
-                    <input type="text" name="title" value="{{ $product->type_id }}" class="form-control" >
+                    <input type="text" name="type_id" value="{{ $product->type_id }}" class="form-control" >
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>name:</strong>
-                    <input type="text" name="title" value="{{ $product->name }}" class="form-control" >
+                    <input type="text" name="name" value="{{ $product->name }}" class="form-control" >
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>code:</strong>
-                    <input type="text" name="title" value="{{ $product->code }}" class="form-control" >
+                    <input type="text" name="code" value="{{ $product->code }}" class="form-control" >
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>price:</strong>
-                    <input type="text" name="title" value="{{ $product->price }}" class="form-control" >
+                    <input type="text" name="price" value="{{ $product->price }}" class="form-control" >
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>productiontime:</strong>
-                    <input type="text" name="title" value="{{ $product->productiontime }}" class="form-control" >
+                    <input type="text" name="productiontime" value="{{ $product->productiontime }}" class="form-control" >
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>productionperiod:</strong>
-                    <input type="text" name="title" value="{{ $product->productionperiod }}" class="form-control" >
+                    <input type="text" name="productionperiod" value="{{ $product->productionperiod }}" class="form-control" >
                 </div>
             </div>
 

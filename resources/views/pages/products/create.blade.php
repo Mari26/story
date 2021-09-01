@@ -26,24 +26,47 @@
         @csrf
 
         <div class="container">
-
+            <div class="col-md-8">
+                <div class="form-group">
+                    <strong>provider_id:</strong>
+                    <input type="text" name="provider_id" class="form-control" value="2" placeholder=" ">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <strong>type_id:</strong>
+                    <input type="text" name="type_id" class="form-control" placeholder=" " value="3" >
+                </div>
+            </div>
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>Name:</strong>
-                    <input type="text" name="title" class="form-control" placeholder="string">
+                    <input type="text" name="name" class="form-control" placeholder="">
                 </div>
             </div>
 
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>code:</strong>
-                    <input type="text" name="title" class="form-control" placeholder="number">
+                    <input type="text" name="code" class="form-control" placeholder="number">
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="form-group">
                     <strong>price:</strong>
-                    <input type="text" name="title" class="form-control" placeholder="number">
+                    <input type="text" name="price" class="form-control" placeholder="number">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <strong>productiontime:</strong>
+                    <input type="text" name="productiontime" class="form-control" placeholder="number">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <strong>productionperiod:</strong>
+                    <input type="text" name="productionperiod" class="form-control" placeholder="number">
                 </div>
             </div>
 
