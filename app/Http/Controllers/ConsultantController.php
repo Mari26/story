@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Consultant;
 use Illuminate\Http\Request;
 
 class ConsultantController extends Controller
@@ -13,7 +13,8 @@ class ConsultantController extends Controller
      */
     public function index()
     {
-        //
+        $consultants=Consultant::all();
+        return view('pages.consultants.index',compact('consultants'));
     }
 
     /**
@@ -23,7 +24,7 @@ class ConsultantController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.consultants.create');
     }
 
     /**
@@ -34,7 +35,11 @@ class ConsultantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+        ]);
+        Consultant::create($request->all());
+        return redirect()->route(consultants.index)->with('success','Provider created successfully.');
     }
 
     /**
@@ -43,9 +48,9 @@ class ConsultantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Consultant $consultant)
     {
-        //
+        return view('pages.consultants.show',compact('consultant'));
     }
 
     /**
@@ -54,9 +59,9 @@ class ConsultantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Consultant $consultant)
     {
-        //
+        return view('pages.consultants.edit',compact('consultant'));
     }
 
     /**
@@ -66,9 +71,13 @@ class ConsultantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Consultant $consultant)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+        ]);
+        $consultant->update($request->all());
+        return redirect()->route('consultants.index')->with('success','consultants updated successfully');
     }
 
     /**
@@ -77,8 +86,10 @@ class ConsultantController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Consultant $consultant)
     {
-        //
+        $consultant->delete();
+        return return redirect()->route('consultans.index')
+        ->with('success','consultant deleted successfully');
     }
 }
