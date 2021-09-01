@@ -81,8 +81,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Product $product)
-    {
-        $request->validate([
+    {       $request->validate([
             'provider_id' => 'required',
             'type_id' => 'required',
             'name' => 'required',

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProviderController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -25,7 +26,7 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::resource('products', ProductController::class);
-
+Route::resource('providers', ProviderController::class);
 
 Route::get('/user/delete', 'App\Http\Controllers\UsersController@delete')->middleware('can:is_admin');
 Route::get('/user/show', 'App\Http\Controllers\UsersController@show')->middleware('can:is_user');
