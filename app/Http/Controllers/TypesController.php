@@ -13,8 +13,8 @@ class TypesController extends Controller
      */
     public function index()
     {
-        $typess=Types::all();
-        return view('pages.types.index',compact('typess'));
+        $types = Types::all();
+        return view('pages.types.index',compact('types'));
     }
 
     /**
@@ -24,7 +24,7 @@ class TypesController extends Controller
      */
     public function create()
     {
-        return view('pages.types.index');
+        return view('pages.types.create');
     }
 
     /**

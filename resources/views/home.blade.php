@@ -34,7 +34,8 @@
 
                         </nav>
                 <div class="container bg-success mt-4">
-                    <p>sweet</p>
+{{--                    <h1 class="display-5 text-center" >SWEET STORY</h1>--}}
+                    <img src="https://thumbor.thedailymeal.com/HIPdqdq4T7jK6lk3PkXy6zz4rAQ=/870x565/https://www.thedailymeal.com/sites/default/files/slideshows/1871042/2252426/Methodology.jpg" class="rounded mx-auto d-block" alt="...">
                 </div >
                 </div>
             </div>
